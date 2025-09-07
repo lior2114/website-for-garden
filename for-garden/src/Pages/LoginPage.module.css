@@ -1,0 +1,79 @@
+.container {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  padding: 24px;
+}
+
+.loginBox {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 20px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--brand);
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputGroup label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.input {
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 16px;
+  background: var(--surface-2);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.links {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.link {
+  color: var(--brand-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

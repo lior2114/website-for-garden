@@ -1,0 +1,239 @@
+.container {
+  min-height: 100dvh;
+  background: transparent;
+}
+
+.header {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 100px;
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  border-bottom: 2px solid var(--border);
+}
+
+.profilePicture {
+  flex-shrink: 0;
+}
+
+.currentAnimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface);
+  border: 3px solid var(--brand);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.currentAnimal .animalEmoji {
+  font-size: 48px;
+  margin: 0;
+}
+
+.currentAnimal .animalName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.noAnimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface-2);
+  border: 2px dashed var(--border);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+}
+
+.defaultAvatar {
+  font-size: 48px;
+  color: #ccc;
+}
+
+.noAnimalText {
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.userInfo {
+  flex-grow: 1;
+}
+
+.userName {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 16px 0;
+}
+
+.userStats {
+  display: flex;
+  gap: 24px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  min-width: 120px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.statValue {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--brand);
+}
+
+.section {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading, .error, .empty {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+  color: var(--text);
+}
+
+.empty p {
+  margin: 8px 0;
+}
+
+.animalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.animalCard {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.animalCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.animalCard .animalEmoji {
+  font-size: 64px;
+  margin: 8px 0;
+}
+
+.animalCard .animalName {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.animalCategory {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+.setProfileButton {
+  background: linear-gradient(180deg, var(--accent), var(--brand));
+  color: #3a2c00;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity 0.2s;
+}
+
+.setProfileButton:disabled {
+  background: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.currentProfile {
+  background: #4caf50;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.removeProfileButton {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.removeProfileButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  .userStats {
+    justify-content: center;
+  }
+  
+  .animalsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  
+  .userName {
+    font-size: 24px;
+  }
+}

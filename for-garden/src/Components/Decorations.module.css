@@ -1,0 +1,8 @@
+.container { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.shape { position: absolute; border-radius: 50%; opacity: 0.25; filter: blur(20px); }
+.one { width: 220px; height: 220px; background: var(--brand); top: -40px; right: -40px; animation: float 8s ease-in-out infinite; }
+.two { width: 280px; height: 280px; background: var(--brand-2); bottom: -60px; left: -60px; animation: float 10s ease-in-out infinite reverse; }
+.three { width: 180px; height: 180px; background: var(--accent); top: 40%; left: -40px; animation: float 12s ease-in-out infinite; }
+@keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(10px) } }
+
+
